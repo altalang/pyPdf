@@ -414,7 +414,7 @@ class TextStringObject(unicode, PdfObject):
 
 
 class NameObject(str, PdfObject):
-    delimiterCharacters = "(", ")", "<", ">", "[", "]", "{", "}", "/", "%"
+    delimiterCharacters = "(", ")", "<", ">", "[", "]", "{", "}", "/", "%", ""
 
     def __init__(self, data):
         str.__init__(data)
@@ -687,7 +687,7 @@ class RectangleObject(ArrayObject):
 
     def getUpperLeft_x(self):
         return self.getLowerLeft_x()
-    
+
     def getUpperLeft_y(self):
         return self.getUpperRight_y()
 
